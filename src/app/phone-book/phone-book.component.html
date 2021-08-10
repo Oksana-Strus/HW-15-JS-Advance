@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" (click)="headerClick('name')">First name
+        <span *ngIf="orderType == 1 && sortColumn === 'name'">▲</span><span *ngIf="orderType == -1 && sortColumn === 'name'">▼</span></th>
+      <th scope="col" (click)="headerClick('secondName')">Last name
+        <span *ngIf="orderType == 1  && sortColumn === 'secondName'">▲</span><span *ngIf="orderType == -1 && sortColumn === 'secondName'">▼</span>
+      </th>
+      <th scope="col" (click)="headerClick('tel')">Number
+        <span *ngIf="orderType == 1 && sortColumn === 'tel'">▲</span><span *ngIf="orderType == -1  && sortColumn === 'tel'">▼</span>
+      </th>
+      <th scope="col">edit</th>
+      <th scope="col">delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let abonent of (arrayOfAbonents |search: searchText) |alphabetOrder: sortColumn: orderType ; let i = index">
+      <td>{{abonent.name }}</td>
+      <td>{{abonent.secondName}}</td>
+      <td>{{abonent.tel}}</td>
+      <td><button class="btn btn-lg btn-warning" (click)="edit(i)">edit</button></td>
+      <td><button class="btn btn-lg btn-danger" (click)="delete(i)">delete</button></td>
+    </tr>
+  </tbody>
+</table>

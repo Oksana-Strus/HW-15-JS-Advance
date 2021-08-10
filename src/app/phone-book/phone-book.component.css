@@ -1,0 +1,36 @@
+th {
+    font-size: 22px;
+    
+  }
+  
+  table {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .edit-input {
+    width: 60%;
+  }
+  
+  .edit-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  
+  td {
+    font-size: 21px;
+  }
+  
+  tbody tr:hover {
+    background-color: rgb(200, 200, 200);
+  }
+  
+  .edit-field:hover {
+    background-color: rgb(200, 200, 200);
+  }
+  

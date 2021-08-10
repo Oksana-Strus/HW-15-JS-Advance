@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Add phone</h4>
+  <button tabindex="-1" type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <span aria-hidden="true"></span>
+  </button>
+</div>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+<div class="modal-body ">
+  <input tabindex="-1"  type="text" formControlName="abonent.name" placeholder="first name goes here" class="form-control input-field" [(ngModel)]="abonent.name"
+    name="abonent.name">
+  <input tabindex="-1" type="text" formControlName="abonent.secondName" placeholder="second name goes here" class="form-control input-field"
+    [(ngModel)]="abonent.secondName" name="abonent.secondName">
+  <input tabindex="-1" type="text" formControlName="abonent.tel" placeholder="phone number goes here" class="form-control input-field" [(ngModel)]="abonent.tel"
+    name="abonent.tel">
+</div>
+<div class="modal-footer">
+  <button tabindex="-1" type="submit" [disabled] = "!checkoutForm.valid"  class="btn btn-primary" (click)="save()">Save</button>
+</div>
+</form>
